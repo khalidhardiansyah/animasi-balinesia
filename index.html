@@ -15,36 +15,68 @@
 <body>
   <div class="hero">
     <nav class="hero__nav">
-      <button class="hero__nav-menu">
-        <p>menu</p>
-        <p>menu</p>
+      <button class="hero__nav-menu" id="btn-menu">
+        <p class="primary-menu"      >menu</p>
+        <p class="secondary-menu"    >menu</p>
       </button>
-      <button class="hero__nav-contact">
-        <p>contact</p>
-        <p>contact</p>
+      <button class="hero__nav-contact" id="btn-contact">
+        <p class="primary-contact"   >contact</p>
+        <p class="secondary-contact" >contact</p>
       </button>
     </nav>
     <div class="hero__menu">
-      <button type="button" class="hero__menu--btn">
+      <button type="button" class="hero__menu--btn" id="btn-menu">
         <img src="/src/assets/icon/close.svg" alt="" srcset="">
       </button>
 
       <ul class="hero__menu--list">
-        <li class="hero__menu--list-item">gallery</li>
-        <li class="hero__menu--list-item">reservation</li>
-        <li class="hero__menu--list-item">pricelist</li>
-        <li class="hero__menu--list-item">help</li>
+        <li class="hero__menu--list-item">
+          <span class="item-1" >gallery</span>
+        </li>
+        <li class="hero__menu--list-item">
+          <span class="item-2" >reservation</span>
+        </li>
+        <li class="hero__menu--list-item">
+          <span class="item-3" >pricelist</span>
+        </li>
+        <li class="hero__menu--list-item">
+          <span class="item-4" >help</span>
+        </li>
       </ul>
     </div>
 
     <div class="hero__contact">
-      <button type="button" class="hero__contact--btn">
+      <button type="button" class="hero__contact--btn" id="btn-contact">
         <img src="/src/assets/icon/close.svg" alt="" srcset="">
       </button>
       <ul class="hero__contact--list">
-        <li class="hero__cintact--list-item">+(62)89656448983</li>
-        <li class="hero__cintact--list-item">hi@balinesia.com</li>
+        <li class="hero__cintact--list-item"><span class="item-1">+(62)89656448983</span></li>
+        <li class="hero__cintact--list-item"><span class="item-2">hi@balinesia.com</span></li>
       </ul>
+    </div>
+
+    <div class="container__hero__reservation">
+      <button type="button" class="hero__reservation--btn" id="btn-reservation">
+        <img src="/src/assets/icon/close.svg" alt="" srcset="">
+      </button>
+      <div class="hero__reservation">
+        <h1>
+          Interest to stay in Balinesia
+        </h1>
+        <p>We'll connect with you very soon</p>
+        <form  class="hero__reservation--form">
+          <input type="text" name="" id="" class="hero__reservation--form-fname" placeholder="First name">
+          <input type="text" name="" id="" class="hero__reservation--form-lname" placeholder="Last name">
+          <input type="email" name="" id="" class="hero__reservation--form-email" placeholder="Email">
+          <select name="" id="" class="hero__reservation--form-country">
+            <option value="" selected>Country of residence</option>
+          </select>
+          <select name="" id="" class="hero__reservation--form-passport">
+            <option value="" selected>Passport country of issue</option>
+          </select>
+          <button class="hero__reservation--form--btn" type="submit">submit</button>
+        </form>
+      </div>
     </div>
 
     <h1 class="hero__title">
@@ -52,7 +84,7 @@
     </h1>
     <footer class="hero__footer">
       <div class="hero__footer-description">the award-winning Vila in Bali</div>
-      <button class="hero__footer-mail" type="button">
+      <button class="hero__footer-mail" id="btn-reservation" type="button">
         <img src="src/assets/icon/mail.svg" alt="mail" class="hero__footer-mail-icon">
       </button>
     </footer>

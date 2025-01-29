@@ -1,3 +1,23 @@
 $platinum-color:#EAE8E2;
 $dark-pastel-red:#B83F24;
 $chinese-black: #171111;
+
+
+@mixin btn-close{
+    border: 1px solid $chinese-black;
+    fill: $chinese-black;
+    width: fit-content;
+    padding: 1.2rem;
+    cursor: pointer;
+}
+
+
+@mixin input-text($size:100%){
+    border-bottom: 1px solid $chinese-black;
+    flex: 0 0 $size;
+    padding-bottom: .5rem;
+
+    &:focus{
+        outline: none;
+    }
+}

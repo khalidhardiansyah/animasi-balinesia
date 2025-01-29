@@ -1,102 +1,182 @@
-.hero__nav{
-    display: flex;
-    padding: 2rem;
-    font-size: 1.3rem;
-    overflow: hidden;
-    
-    &-menu{
-            text-transform: uppercase;
-            margin-right: auto;
-            cursor: pointer;
-            background-color: orange;
-            max-height: 2rem;
-            overflow-y: hidden;
-            
-            
-        }
-        &-menu p:last-child{
-            
-        }
+.hero__nav {
+  display: flex;
+  padding: 2rem;
+  font-size: 1.3rem;
+  overflow: hidden;
 
-        &-contact{
-            margin-left: auto;
-            cursor: pointer;
-            text-transform: uppercase;
-            background-color: orange;
-            max-height: 2rem;
-            overflow-y: hidden;
-        }
-
-        &-contact p:last-child{
-            // opacity: 0;
-        }
-}
-
-
-.hero__title{
-    align-self: center;
-    font-size:18.5rem;
-    text-transform: capitalize;
-    font-weight: 400;
-}
-
-
-.hero__footer{
-    margin-top: auto;
-    font-size: 1.3rem; 
-    text-transform: capitalize;
-    display: flex;
-    align-items: center;
-    padding: 2rem 2rem;
-    width: 100%;
-    &-description{
-        flex: 0 0 96%;
-        text-align: center;
-    }
-    &-mail{
-        flex: 0 0 1;
-        margin-left: auto;
-        background-color: white;
-        height: 3.75rem;
-        width: 3.75rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-        &-icon{
-            width: 30px;
-            height: 30px;
-            fill: $chinese-black;
-        }
-    }
-}
-
-
-.hero__menu--btn{
-    border: 1px solid $chinese-black;
-    fill: $chinese-black;
-    padding: 1.2rem;
-    width: fit-content;
-    
-
-}
-
-
-
-
-.hero__menu--list{
-    margin-block: auto;
-    justify-self: center;
+  &-menu {
     text-transform: uppercase;
-    font-size: 2.4rem;
+    margin-right: auto;
+    cursor: pointer;
+    max-height: 2rem;
+    overflow-y: hidden;
+  }
+  &-contact {
+    margin-left: auto;
+    cursor: pointer;
+    text-transform: uppercase;
+    max-height: 2rem;
+    overflow-y: hidden;
+  }
+
+  &-contact p:last-child {
+    // opacity: 0;
+  }
+}
+
+.hero__title {
+  align-self: center;
+  font-size: 18.5rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.hero__footer {
+  margin-top: auto;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  padding: 2rem 2rem;
+  width: 100%;
+  &-description {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  &-mail {
+    flex: 0 0 1;
+    margin-left: auto;
+    background-color: white;
+    height: 3.75rem;
+    width: 3.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: scale(.8);
+    transition: transform 0.3s ease-in-out;
+    transition-duration: .3;
+
+    transform-origin: bottom right;
+
+    &:hover{
+      transform: scale(1)
+    }
+
+    &-icon {
+      width: 30px;
+      height: 30px;
+      fill: $chinese-black;
+    }
+
+
+  }
+}
+
+.hero__menu--btn {
+  @include btn-close;
+}
+
+.hero__menu--list {
+  margin-block: auto;
+  justify-self: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+
+  & li{
+    max-height: 3rem;
+    overflow-y: hidden;
+    
+    &:not(:last-child){
+      margin-bottom: 1.3rem;
+    }
+  
+  }
+  & li .item-1, .item-2, .item-3, .item-4{
+    display: block;
+    transform: translateY(80%)
+  }
+  
+}
+
+.hero__contact--btn {
+    align-self: self-end;
+    @include btn-close;
 }
 
 
-.hero__contact--btn{
-    border: 1px solid $chinese-black;
-    fill: $chinese-black;
-    width: fit-content;
-    padding: 1.2rem;
+.hero__contact--list{
+  margin-block: auto;
+  justify-self: center;
+  text-transform: uppercase;
+  font-size: 2rem;
 
+  & li{
+    max-height: 3rem;
+    overflow-y: hidden;
+    
+    &:not(:last-child){
+      margin-bottom: 1.3rem;
+    }
+  
+  }
+
+  & li .item-1, .item-2, .item-3, .item-4{
+    display: block;
+    transform: translateY(80%)
+  }
 }
+
+
+
+
+.hero__reservation {
+  max-width: 55%;
+  color: $chinese-black;
+  padding: 0.8rem 1.5rem;
+
+  & > *:not(:last-child) {
+    margin-bottom: 0.6rem;
+  }
+  & h1 {
+    font-size: 3.95rem;
+  }
+  & p {
+    text-align: center;
+    font-size: 0.1.3rem;
+  }
+}
+
+.hero__reservation--form {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.8rem;
+  row-gap: 1.3rem;
+
+  &-fname,&-lname  {
+    @include input-text(49%);
+  }
+  &-email {
+    @include input-text;
+  }
+  &-country {
+    @include input-text;
+  }
+  &-passport {
+    @include input-text;
+  }
+
+  &--btn {
+    margin-top: 2.5rem;
+    background-color: $dark-pastel-red;
+    color: white;
+    padding: 1rem 3.5rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+  
+}
+
