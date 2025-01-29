@@ -25,12 +25,12 @@ let listMenu: string[] = [];
 let listContact: string[] = [];
 
 menus.forEach((menu) => {
-    const className = "." + menu.className;
+    const className = "." + (menu as HTMLElement).className;
     listMenu.push(className)
 });
 
 contacts.forEach((contact) => {
-    const className = "." + contact.className;
+    const className = "." + (contact as HTMLElement).className;
     listContact.push(className)
 });
 
